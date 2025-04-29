@@ -1,6 +1,7 @@
-# FULL_ADDER_SUBTRACTOR
+# NAME : MOHANRAJ.S
+# REG NO : 212224100036
 
-Implementation-of-Full-Adder-and-Full-subtractor-circuit
+# EXP4:FULL ADDER AND SUBTRACTOR:
 
 **AIM:**
 
@@ -38,20 +39,86 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+
+# FULL ADDER
+
+![image](https://github.com/user-attachments/assets/f498c445-fd3a-4e79-9e8a-3aabef86d2a4)
+
+
+# FULL SUBRACTOR
+
+![image](https://github.com/user-attachments/assets/26d770f8-64ef-4266-b758-8090fa9b32d4)
+
+
 **Procedure**
 
 Write the detailed procedure here
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+ Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+
+# FULL ADDER
+~~~C
+module fulladder(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^cin);
+
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+
+endmodule
+~~~
+
+# FULL SUBRACTOR
+~~~C
+module fullsubractor(a,b,bin,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( a & b)| ( bin & ((a ^ b ))));
+
+endmodule
+~~~
 
 **RTL Schematic**
 
+FULL ADDER
+
+![full adder logic gate screenshot](https://github.com/user-attachments/assets/185d5335-bbd7-4078-b1eb-53173a2ecf28)
+
+
+
+FULL SUBRACTOR
+
+
+![full subtractor logic gate screenshot](https://github.com/user-attachments/assets/e62e8038-7a2e-4bb0-8c5a-ebee2e2b6c7e)
+
+
 **Output Timing Waveform**
 
-**Result:**
+FULL ADDER
+
+![full adder waveform screenshot](https://github.com/user-attachments/assets/b63e98de-4216-44ec-9102-82080407e08e)
+
+
+
+
+FULL SUBRACTOR
+
+
+![full subtractor waveform screenshot](https://github.com/user-attachments/assets/2a6a5327-cd60-40a5-8e0b-3a85be8bf88b)
+
+
+
+# Result:
 
 Thus the Full Adder and Full Subtractor circuits are designed and the truth tables is verified using Quartus software.
 
